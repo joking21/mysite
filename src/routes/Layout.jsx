@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from '../templates/Header';
 import Footer from '../templates/Footer';
 import Aside from '../templates/Aside';
@@ -15,11 +15,11 @@ class Applayout extends React.Component {
                 {
                     routerList.map((item, key) => {
                         return (
-
                             <Route key={key}
                                 exact={item.exact}
                                 path={item.path}
                                 render={() => (
+                                    // islogin ? <Redirect to="/login" /> 
                                     <div>
                                         <Header />
                                         <item.component />
