@@ -1,7 +1,7 @@
-import PageHomeArticleList from './PageHome/articleList';
+import PageHomeArticle from './PageHome/Article';
 const stores = {
     PageHome:{
-        articleList: new PageHomeArticleList(),
+        Article: new PageHomeArticle(),
     }
 }
 export default stores;

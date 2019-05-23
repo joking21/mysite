@@ -5,6 +5,7 @@ import Routes from './routes';
 import store from './store';
 import '../src/style/main.less';
 
+console.log(store);
 ReactDOM.render((
   <Provider {...store}>
       <Routes />

@@ -1,6 +1,8 @@
 import React from 'react';
+import { inject, observer } from 'mobx-react';
 
-
+@inject('PageHome')
+@observer
 class PageHome extends React.Component {
     constructor(props) {
         super(props);
@@ -8,7 +10,7 @@ class PageHome extends React.Component {
     render() {
         return (
             <div>
-                {console.log(this.props)}
+                {console.log(this.props.PageHome.Article.listData.toJS())}
                 111
             </div>
         )
