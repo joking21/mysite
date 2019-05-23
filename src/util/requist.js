@@ -2,17 +2,11 @@ import axios from "axios";
 import api from "./api";
 import { success, failer } from './notice';
 const prefix = process.env.NODE_ENV === "development" ? '/dw' : '/api';
-function parseUrl(url) {
-    const urlParent = url.split('.')[0];
-    const childParent = url.split('.')[1];
-    const tempUrl = api[urlParent][childParent];
-    return prefix + tempUrl;
-}
 axios.defaults.headers = {
     "Content-Type": "application/json; charset=UTF-8"
 }
 export function postData(url, para, successFun, errorFun) {
-    axios.post(parseUrl(url), para)
+    axios.post(prefix + url, para)
         .then(function (response) {
             if (response.data.code === 200) {
                 success(response.data.msg);
@@ -29,7 +23,7 @@ export function postData(url, para, successFun, errorFun) {
 }
 
 export function getData(url, para, successFun, errorFun) {
-    axios.get(parseUrl(url), {
+    axios.get(prefix + url, {
         params: para
     })
         .then(function (response) {
@@ -47,7 +41,7 @@ export function getData(url, para, successFun, errorFun) {
 }
 
 export function uploadFile(url, para, successFun, errorFun) {
-    axios.post(parseUrl(url), para, {
+    axios.post(prefix + url, para, {
         'Content-Type': 'multipart/form-data'
     })
         .then(function (response) {
@@ -65,7 +59,7 @@ export function uploadFile(url, para, successFun, errorFun) {
         });
 }
 export function getFile(url, para, successFun, errorFun) {
-    axios.get(`${parseUrl(url)}/${para}`)
+    axios.get(`${url}/${para}`)
         .then(function (response) {
             if (response.data.code === 200) {
                 if (successFun) successFun(response.data);

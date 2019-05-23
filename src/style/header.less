@@ -1,0 +1,58 @@
+@red:#C24050;
+@white: #fff;
+.d-header{
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    background: @red;
+    padding: 0px 60px;
+    div{
+        width: 100%;
+        text-align: center;
+        h1{
+            font-family: "Microsoft Yahei"!important;
+            display: inline-block;
+            padding: 30px 0 30px 0;
+            cursor: pointer;
+            font-weight: 100;
+        }
+        .title1{
+            letter-spacing: -2px;
+            position: relative;
+            color: @white;
+            font-size: 54px;
+            text-shadow: 0 0 1px rgba(94,255,216,.8);
+            margin: 0;
+            padding: 0;
+            z-index: 0;
+            -webkit-transition: all .1s ease-out;
+            -moz-transition: all .1s ease-out;
+            -o-transition: all .1s ease-out;
+            -ms-transition: all .1s ease-out;
+            transition: all .1s ease-out;
+        }
+        .title2{
+            position: relative;
+            color: @white;
+            font-weight: 400;
+            font-size: 24px;
+            text-shadow: 0 0 1px rgba(94,255,216,.8);
+            margin-left: 5px;
+            letter-spacing: 1px;
+            padding: 0;
+            z-index: 2;
+            -webkit-transition: all .5s ease-out;
+            -moz-transition: all .5s ease-out;
+            -o-transition: all .5s ease-out;
+            -ms-transition: all .5s ease-out;
+            transition: all .5s ease-out;
+        }
+        h1:hover .title1{
+            letter-spacing: 5px;
+        }
+        h1:hover .title2 {
+            left: 26px;
+            opacity: .2;
+        }
+    }
+}

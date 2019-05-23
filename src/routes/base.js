@@ -1,11 +1,10 @@
-import NoMatch from '../components/notPage/404';
-import App from '../views/PageApp';
 import Test from '../views/PageTest';
+import PageHome from '../views/PageHome';
 export default [
     {
         path: '/',
         exact: true,
-        component: App,
+        component: PageHome,
         meta:{
             hasHeader: true,
             hasFooter: true,

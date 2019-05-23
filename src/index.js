@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'mobx-react';
 import Routes from './routes';
 import store from './store';
-// import 'antd/dist/antd.css';
+import '../src/style/main.less';
 
 ReactDOM.render((
-  <Routes {...store} />
+  <Provider {...store}>
+      <Routes />
+  </Provider>
 )
   , document.getElementById('root'));

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "../style/header.less";
 
 class Header extends React.Component{
     constructor(props){
@@ -7,9 +7,13 @@ class Header extends React.Component{
     }
     render(){
         return(
-            <div>
-                {console.log(this.props)}
-               头部
+            <div className="d-header">
+                <div>
+                    <h1>
+                        <span className="title1">Joking</span>
+                        <span className="title2">个人网页</span>
+                    </h1>
+                </div>
             </div>
         )
     }

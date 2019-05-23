@@ -7,7 +7,6 @@ class PageApp extends React.Component {
     render() {
         return (
             <div>
-                <Link to='/'>首页</Link>
                 test
             </div>
         )

@@ -1,0 +1,32 @@
+@gray: #4a4a4a;
+@white: #fff;
+@red:#C24050;
+.d-nav{
+    padding: 0px 60px;
+    height: 52px;
+    line-height: 52px;
+    background-color: @gray;
+    opacity: .9;
+    clear: both;
+    color: @white;
+    .nav{
+        position: relative;
+        left: 0;
+        display: block;
+        margin: 0 auto;
+        font-size: 16px;
+        li{
+            display: inline-block;
+            margin-right: 1px;
+            letter-spacing: 2px;
+            padding: 0px 18px;
+            cursor: pointer;
+        }
+        li:hover{
+            background: @red;
+        }
+        .is-active{
+            background: @red;
+        }
+    }
+}

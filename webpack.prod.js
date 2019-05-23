@@ -8,12 +8,7 @@ module.exports = merge(common, {
     // stats: 'errors-only',  //  是否有显示文字输出
     devtool: 'source-map',
     plugins: [
-        new CleanWebpackPlugin(['dist']),
-        // new webpack.SourceMapDevToolPlugin({
-        //     filename: '/js/[name].js.map',
-        //     // exclude: ['vendor.js']
-        // })
-        
+        new CleanWebpackPlugin(['dist']),        
     ],
     optimization: {
         minimizer: [
