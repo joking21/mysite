@@ -15,7 +15,7 @@ class PageHome extends React.Component {
         console.log(listData);
         return (
             <div>
-                {listData.map((item, index) => {
+                {listData.map((item) => {
                     // const _item = item.toJS();
                     return <div key={item.id}>
                      {

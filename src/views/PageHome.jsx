@@ -5,13 +5,13 @@ import '../style/pageHome.less'
 @inject('PageHome')
 @observer
 class PageHome extends React.Component {
-    constructor(props) {
+     constructor(props) {
         super(props);
     }
     render() {
         return (
             <div className="d-content">
-                <Article Article={this.props.PageHome.Article} />
+                 <Article  Article={this.props.PageHome.Article} />
             </div>
         )
     }
