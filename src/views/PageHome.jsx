@@ -1,6 +1,7 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
-
+import Article from '../component/pageHome/Article';
+import '../style/pageHome.less'
 @inject('PageHome')
 @observer
 class PageHome extends React.Component {
@@ -9,9 +10,8 @@ class PageHome extends React.Component {
     }
     render() {
         return (
-            <div>
-                {console.log(this.props.PageHome.Article.listData.toJS())}
-                111
+            <div className="d-content">
+                <Article Article={this.props.PageHome.Article} />
             </div>
         )
     }
